@@ -5,13 +5,17 @@ var stop= document.getElementById("stop");
 stop.addEventListener("click",parar);
 
 var cuchi = document.getElementById("cuchicuchi");
+cuchi.volume = 0.4;
+
 function acariciar(){
     var monita = document.getElementById("monita");
     if (monita.src.match("mueve")) {
         monita.src = "monita_mueve.gif";
+        cuchi.currentTime = 0;
         cuchi.play();
     } else {
         monita.src = "monita_mueve.gif";
+        cuchi.currentTime = 0;
         cuchi.play();
     }
 }
@@ -27,4 +31,5 @@ function parar(){
     cuchi.currentTime = 0;
 	}
 }
+
 
