@@ -25,7 +25,6 @@ function parar(){
 		monita.src="monita.png";
     cuchi.pause();
     cuchi.currentTime = 0;
-
 	}
 }
 
