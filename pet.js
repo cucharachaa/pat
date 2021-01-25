@@ -20,15 +20,16 @@ function acariciar(){
     }
 }
 function parar(){
+	
 	var monita= document.getElementById("monita");
 	if (monita.src.match("monita")){
 		monita.src="monita.png";
-    cuchi.pause();
-    cuchi.currentTime = 0;
+   		cuchi.pause();
+   		cuchi.currentTime = 0;
 	}else{
 		monita.src="monita.png";
-    cuchi.pause();
-    cuchi.currentTime = 0;
+   	cuchi.pause();
+   	cuchi.currentTime = 0;
 	}
 }
 
