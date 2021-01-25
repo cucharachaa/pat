@@ -1,4 +1,5 @@
 var pet= document.getElementById("pet");
+var pet= document.getElementById("pet");
 pet.addEventListener("click",acariciar);
 
 var stop= document.getElementById("stop");
@@ -20,16 +21,15 @@ function acariciar(){
     }
 }
 function parar(){
-	
 	var monita= document.getElementById("monita");
 	if (monita.src.match("monita")){
 		monita.src="monita.png";
-   		cuchi.pause();
-   		cuchi.currentTime = 0;
+    cuchi.pause();
+    cuchi.currentTime = 0;
 	}else{
 		monita.src="monita.png";
-   	cuchi.pause();
-   	cuchi.currentTime = 0;
+    cuchi.pause();
+    cuchi.currentTime = 0;
 	}
 }
 
