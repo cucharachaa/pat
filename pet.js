@@ -6,7 +6,7 @@ var stop= document.getElementById("stop");
 stop.addEventListener("click",parar);
 
 var cuchi = document.getElementById("cuchicuchi");
-cuchi.volume = 0.2;
+cuchi.volume = 0.1;
 
 function acariciar(){
     var monita = document.getElementById("monita");
