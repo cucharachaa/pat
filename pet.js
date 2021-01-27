@@ -1,40 +1,54 @@
-var pet= document.getElementById("pet");
-var pet= document.getElementById("pet");
+let pet= document.getElementById("pet");
 pet.addEventListener("click",acariciar);
 
-var stop= document.getElementById("stop");
+let stop= document.getElementById("stop");
 stop.addEventListener("click",parar);
 
-var cuchi = document.getElementById("cuchicuchi");
+let cuchi = document.getElementById("cuchicuchi");
 cuchi.volume = 0.2;
 
+let timeoutId;
+let contador = 0;
+let monita = document.getElementById("monita");
+//console.log()
+
 function acariciar(){
-    var monita = document.getElementById("monita");
-    if (monita.src.match("mueve")) {
+   //Cada que se presiona este boton cambia a la imagen original
+    monita.src = "monita.png";
+    sleep(1000);
+    if (monita.src.match("monita.png")) {
         monita.src = "monita_mueve.gif";
-	cuchi.volume = 0.2;
         cuchi.currentTime = 0;
         cuchi.play();
     } else {
         monita.src = "monita_mueve.gif";
-	cuchi.volume = 0.2;
         cuchi.currentTime = 0;
         cuchi.play();
     }
 }
+
 function parar(){
-	var monita= document.getElementById("monita");
 	if (monita.src.match("monita")){
 		monita.src="monita.png";
-    cuchi.volume = 0.2;	
     cuchi.pause();
     cuchi.currentTime = 0;
 	}else{
 		monita.src="monita.png";
-    cuchi.volume = 0.2;		
     cuchi.pause();
     cuchi.currentTime = 0;
 	}
 }
 
-
+function suma(){
+  //concepto: debounce -> Si se presiona en menos de 195 milisegundos no aumenta contador
+  if (timeoutId){
+    clearTimeout(timeoutId);
+  }
+  timeoutId = setTimeout(() =>{
+    document.getElementById('contando').innerHTML = contador+=1
+  },500)
+}
+//duerme
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+  }
