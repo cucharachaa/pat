@@ -5,7 +5,7 @@ let stop= document.getElementById("stop");
 stop.addEventListener("click",parar);
 
 let cuchi = document.getElementById("cuchicuchi");
-cuchi.volume = 0.2;
+cuchi.volume = 0.1;
 
 let timeoutId;
 let contador = 0;
